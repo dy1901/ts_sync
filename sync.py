@@ -49,11 +49,11 @@ while(True):
             watchlist_time[i] = get_mtime(path+file)
             copy_file(file)
 
-        if(file == 'watchlist.yml'):
-            watchlist = load_watchlist('watchlist.yml')
-            watchlist_time = get_watchlist_time(watchlist)
+            if(file == 'watchlist.yml'):
+                watchlist = load_watchlist('watchlist.yml')
+                watchlist_time = get_watchlist_time(watchlist)
 
-        else:
-            subprocess.run(['python', file])
-        print('-------------finish--------------')
+            else:
+                subprocess.run(['python', file])
+            print('-------------finish--------------')
 
